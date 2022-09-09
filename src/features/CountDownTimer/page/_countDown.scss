@@ -1,0 +1,83 @@
+.countDown {
+&-time {
+     height: 80px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+&-running {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // transform: translateY(20%);
+}
+&-digit {
+     position: relative;
+      display: flex;
+      flex: 0 1 25%;
+      font-size: 30px;
+      background-color: #404549;
+      border-radius: 5px;
+      padding: 10px 12px;
+      color: white;
+      margin-right: 2px;
+  
+      &:after {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 50%;
+        bottom: 50%;
+        content: '';
+        width: '100%';
+        height: 2px;
+        background-color: #232323;
+        opacity: 0.4;
+      }
+}
+&-container {
+
+  margin: 0 2px -4px 2px;
+}
+&-separator {
+ display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #404549;
+  border-radius: 6px;
+  margin: 5px 0px;
+}
+&-notRun {
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // transform: translateY(50%);
+}
+&-input {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+}
+&-input span {
+  text-align: center;
+}
+&-inputList {
+  display: flex;
+}
+&-setup {
+  // border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  padding: 5px ;
+}
+&-buttonTimer {
+      margin: 0 5px;
+  border-radius: 5px;
+  color: #4e5054;
+  background-color: #14141d;
+  border: 1px solid gray;
+}
+}

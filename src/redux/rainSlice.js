@@ -12,12 +12,16 @@ export const rainSlice = createSlice({
   reducers: {
   changeRainStatus: (state, action) => {
     state.rainMode = state.rainMode === 'clear' ? 'rain' : 'clear';
-    state. rainValue = action.payload
+    state.rainValue = action.payload
+  },
+  setRain: (state, action) => {
+    state.rainMode = action.payload > 0 ? 'rain' : 'clear';
+    state.rainValue = action.payload
   }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const {changeRainStatus} = rainSlice.actions
+export const {changeRainStatus, setRain} = rainSlice.actions
 
 export default rainSlice.reducer

@@ -1,7 +1,8 @@
-* {
+  * {
   -webkit-font-smoothing: antialiased;
-}
-.videoIn {
+  box-sizing: border-box;
+  }
+  .videoIn {
   z-index: 1;
   object-fit: cover;
   position: absolute;
@@ -11,9 +12,9 @@
   height: 100%;
   opacity: 1;
   transition: opacity 1s;
-}
+  }
 
-.videoOut {
+  .videoOut {
   z-index: 1;
   object-fit: cover;
   position: absolute;
@@ -23,8 +24,14 @@
   height: 100%;
   opacity: 0;
   transition: opacity 1s;
-}
-button {
+  }
+  button {
   background: transparent;
   border: none;
-}
+  }
+  .active {
+      color: #f3a952;
+    }
+  .complete {
+  text-decoration: line-through;
+  }

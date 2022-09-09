@@ -6,7 +6,7 @@ import nightRain from "../../../../assets/video/Night-rainny.mp4"
 import dayClear from "../../../../assets/video/Day-sunny.mp4"
 import dayRain from "../../../../assets/video/Day-rainny.mp4"
 import RainButton from '../RainButton';
-
+import ModifierBoard from '../ModifierBoard';
 const Home = () => {
      const [timerStart, setTimerStart] = useState(false);
 
@@ -51,6 +51,7 @@ console.log(combineMode)
         <source src={dayRain} type='video/mp4' />
       </video>
       <RainButton/>
+      <ModifierBoard/>
       </div>
   )
 }

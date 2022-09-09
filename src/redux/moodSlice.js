@@ -8,11 +8,13 @@ export const moodSlice = createSlice({
   name: 'mood',
   initialState,
   reducers: {
-  
+  changeMoodStatus: (state, action) => {
+  state.moodMode = action.payload
+  }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const {} = moodSlice.actions
+export const {changeMoodStatus} = moodSlice.actions
 
 export default moodSlice.reducer

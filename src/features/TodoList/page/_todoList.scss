@@ -1,0 +1,13 @@
+.todoList {
+    &-item {
+         overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  height: 190px;
+  margin-top: 20px;
+    }
+    &-item::-webkit-scrollbar {
+  display: none;
+
+    }
+}

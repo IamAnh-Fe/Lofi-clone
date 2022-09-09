@@ -1,0 +1,111 @@
+.modifierBoard {
+      position: absolute;
+  right: -20px;
+  top: 45%;
+  transform: translateY(-50%);
+  height: 135px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 60px;
+  z-index: 11;
+  border-radius: 34px;
+  margin-right: 36px;
+  padding: 10px;
+  color: #4e5054;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: border-radius 0.1s ease-in-out;
+  &-icon {
+     cursor: pointer;
+    padding: 14px;
+    border-top: 2px solid #4e5054;
+    &-icon:first-child {
+        border: none;
+    }
+  }
+  .modifierBoard .mood {
+  border-radius: 0 34px 34px 34px;
+  }
+
+  .modifierBoard .focus {
+  border-radius: 34px 34px 34px 0;
+  }
+  &-box {
+  position: absolute;
+  right: 100%;
+  top: -110%;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 345px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 30px;
+  transform-origin: right top;
+  border-radius: 30px;
+  }
+  &-options {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &-item {
+    width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #14141d;
+      margin: 10px;
+      padding: 12px;
+      width: 180px;
+      height: 85px;
+      border-radius: 12px;
+    }
+    &-item i {
+      font-size: 32px;
+    }
+   
+  &-text {
+    color: white;
+  }
+  &-title {
+    font-size: 20px;
+    color: white;
+    margin: 15px 0;
+  }
+  &-volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  &-volume svg{
+  font-size: 24px;
+  }
+  &-inputMain {
+    width: 180px;
+  }
+  // hide scrollbar but keep the function
+  &-sounds::-webkit-scrollbar {
+      display: none;
+  }
+  &-sounds {
+    display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  }
+
+  &-sound {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+&-input {
+    width: 180px;
+}
+
+
+}

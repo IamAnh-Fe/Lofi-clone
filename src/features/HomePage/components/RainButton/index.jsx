@@ -4,7 +4,6 @@ import ReactAudioPlayer from 'react-audio-player';
 import { AiOutlineCloud } from 'react-icons/ai';
 import { BsCloudRainFill } from 'react-icons/bs';
 import { changeRainStatus } from '../../../../redux/rainSlice';
-import rainSound from "../../../../assets/sound/rain_city.mp3"
 const RainButton = () => {
     const dispatch = useDispatch();
   const rain = useSelector((state) => state.rain);
@@ -23,7 +22,7 @@ console.log(rain.rainValue)
         <ReactAudioPlayer
           preload='auto'
           autoPlay
-          src={rainSound}
+          src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631342/lofi/rain_city_xkvnug.mp3'
           loop
           volume={rain.rainValue / 100}
         />
