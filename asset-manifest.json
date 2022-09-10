@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/IamAnh-Fe/Lofi-clone/static/css/main.dee2e06e.css",
+    "main.js": "/IamAnh-Fe/Lofi-clone/static/js/main.2063f913.js",
+    "static/js/787.28cb0dcd.chunk.js": "/IamAnh-Fe/Lofi-clone/static/js/787.28cb0dcd.chunk.js",
+    "static/media/Night-rainny.mp4": "/IamAnh-Fe/Lofi-clone/static/media/Night-rainny.0920f2f774057f105abe.mp4",
+    "static/media/Day-rainny.mp4": "/IamAnh-Fe/Lofi-clone/static/media/Day-rainny.2739eaa80adea5b0e73a.mp4",
+    "static/media/Day-sunny.mp4": "/IamAnh-Fe/Lofi-clone/static/media/Day-sunny.26d19c50f5c958332f5e.mp4",
+    "static/media/Night-clear.mp4": "/IamAnh-Fe/Lofi-clone/static/media/Night-clear.73538ed81e0902604dbd.mp4",
+    "static/media/lofi-logo.gif": "/IamAnh-Fe/Lofi-clone/static/media/lofi-logo.0cbf9e63b4a021661126.gif",
+    "static/media/pause.svg": "/IamAnh-Fe/Lofi-clone/static/media/pause.3da443b3d52748f86cd61dd69be1564c.svg",
+    "static/media/play.svg": "/IamAnh-Fe/Lofi-clone/static/media/play.2979c01f0965440f1e942b84fb35197d.svg",
+    "static/media/next.svg": "/IamAnh-Fe/Lofi-clone/static/media/next.56f3bbcdc95fb0e8cd27542d791ba277.svg",
+    "static/media/prev.svg": "/IamAnh-Fe/Lofi-clone/static/media/prev.ae27fdce8fc7f104898132173e8de149.svg",
+    "index.html": "/IamAnh-Fe/Lofi-clone/index.html",
+    "main.dee2e06e.css.map": "/IamAnh-Fe/Lofi-clone/static/css/main.dee2e06e.css.map",
+    "main.2063f913.js.map": "/IamAnh-Fe/Lofi-clone/static/js/main.2063f913.js.map",
+    "787.28cb0dcd.chunk.js.map": "/IamAnh-Fe/Lofi-clone/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dee2e06e.css",
+    "static/js/main.2063f913.js"
+  ]
+}
