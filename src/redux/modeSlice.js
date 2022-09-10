@@ -11,7 +11,7 @@ export const modeSlice = createSlice({
   setMode: (state) => {
     state.mode = state.mode === 'day' ? 'night' : 'day';
   }
-  },
+  }
 })
 
 // Action creators are generated for each case reducer function

@@ -1,25 +1,32 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React, {useRef, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { changePlaying } from '../../../../redux/volumeSlice';
+
 import pause from "../../../../assets/icons/pause.svg";
 import play from "../../../../assets/icons/play.svg";
 import next from "../../../../assets/icons/next.svg";
 import prev from "../../../../assets/icons/prev.svg";
 
-
 const Player = ({ currentSongIndex, setCurrentSongIndex, songs }) => {
   const audioElement = useRef();
-  const [isPlaying, setIsPlaying] = useState(false);
+  const dispatch = useDispatch();
   const volumeValue = useSelector((state) => state.volume.volumeValue);
+  const playing = useSelector((state) => state.volume.isPlaying);
+
+  //Play or pause video
   useEffect(() => {
-    if (isPlaying) {
+    if (playing ) {
       audioElement.current.play();
     } else {
       audioElement.current.pause();
     }
     audioElement.current.volume = volumeValue / 100;
   });
- console.log(songs[currentSongIndex].src)
-     const SkipSong = (forwards = true) => {
+
+   const handlePlaying = () => {
+   dispatch(changePlaying ())
+    };
+    const SkipSong = (forwards = true) => {
     if (forwards) {
       setCurrentSongIndex(() => {
         let temp = currentSongIndex;
@@ -53,8 +60,8 @@ const Player = ({ currentSongIndex, setCurrentSongIndex, songs }) => {
              <button className='' onClick={() => SkipSong(false)}>
           <img src={prev} alt='prev' />
         </button>
-        <button className='' onClick={() => setIsPlaying(!isPlaying)}>
-          {isPlaying ? (
+        <button className='' onClick={handlePlaying}>
+          {playing  ? (
             <img src={pause} alt='pause' />
           ) : (
             <img src={play} alt='play' />

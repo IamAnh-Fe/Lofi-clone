@@ -22,8 +22,8 @@ console.log(mood)
    const [openMood, setOpenMood] = useState(false);
   const [openFocus, setOpenFocus] = useState(false);
 
-  const [cityTraffic, setCityTraffic] = useState(0);
   const [cityRain, setCityRain] = useState(rain);
+  const [cityTraffic, setCityTraffic] = useState(0);
   const [fireplace, setFireplace] = useState(0);
   const [snow, setSnow] = useState(0);
   const [summerStorm, setSummerStorm] = useState(0);
@@ -68,8 +68,8 @@ console.log(mood)
     setOpenFocus(false);
   };
    const changeMoodHandler = (e) => {
-    dispatch(changeMoodStatus(e.target.id));
-console.log('e',e.target.id)
+    dispatch(changeMoodStatus(e.currentTarget.id));
+console.log('e',e.currentTarget.id)
 
   };
   const changeVolumeHandler = (e) => {
@@ -78,9 +78,92 @@ console.log('e',e.target.id)
 
   return (
     <>
-    <div className={`modifierBoard ` + (openMood && 'mood ') + (openFocus && ' focus ')}>
- <div className='modifierBoard-icon'>
-          <div className={`icon ` + (openMood && 'active')}>
+     {!openMood && (
+        <div>
+           <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src="https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631340/lofi/city_traffic_vbbxoq.mp3"
+                    loop
+                    volume={cityTraffic / 100}
+                  />
+           
+          <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631340/lofi/fireplace_c5us9n.mp3'
+                    loop
+                    volume={fireplace / 100}
+                  />
+
+          <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631343/lofi/snow_u80ggl.mp3'
+                    loop
+                    volume={snow / 100}
+                  />
+                        <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631344/lofi/summer_storm_rhwi01.mp3'
+                    loop
+                    volume={summerStorm / 100}
+                  />
+                     <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631341/lofi/fan_wfhvzd.mp3'
+                    loop
+                    volume={fan / 100}
+                  />
+                      <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631341/lofi/forest_night_dtfbiq.mp3'
+                    loop
+                    volume={forestNight / 100}
+                  />
+                         <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631344/lofi/waves_mwvrjo.mp3'
+                    loop
+                    volume={wave / 100}
+                  />
+                      <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631343/lofi/wind_w4yxsr.mp3'
+                    loop
+                    volume={wind / 100}
+                  />
+                       <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631342/lofi/people_talk_inside_y0nko0.mp3'
+                    loop
+                    volume={people / 100}
+                  />
+                          <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631342/lofi/river_o2juoa.mp3'
+                    loop
+                    volume={river / 100}
+                  />
+                          <ReactAudioPlayer
+                    preload='auto'
+                    autoPlay
+                    src='https://res.cloudinary.com/dxk9kfxk1/video/upload/v1662631341/lofi/rain_forest_imrnss.mp3'
+                    loop
+                    volume={rainForest / 100}
+                  />
+        </div>
+      )}
+    <div className="modifierBoard" >
+ <div className={`modifierBoard-music` + (openMood && 'mood ')}>
+          <div className={`modifierBoard-icon ` + (openMood && 'active')}>
             <i onClick={openMoodHandler}>
               <BsSliders/>
             </i>
@@ -140,7 +223,7 @@ console.log('e',e.target.id)
                   />
                     <input type="range" className='modifierBoard-input' min="0" max="100" value={cityTraffic}  onChange={(e) => setCityTraffic(e.target.value)}/>
                 </div>
-                <div className='modifierBoard-sound'>
+                {/* <div className='modifierBoard-sound'>
                   <p>City rain</p>
                   <ReactAudioPlayer
                     preload='auto'
@@ -150,7 +233,7 @@ console.log('e',e.target.id)
                     volume={rain / 100}
                   />
                     <input type="range" className='modifierBoard-input' min="0" max="100" value={rain}  onChange={rainSliderHandler}/>
-                </div>
+                </div> */}
                 <div className='modifierBoard-sound'>
                   <p>Fireplace</p>
                   <ReactAudioPlayer
@@ -265,8 +348,8 @@ console.log('e',e.target.id)
             </div>
           )}
         </div>
-        <div className='modifierBoard-icon'>
-          <div className={'icon ' + (openFocus && 'active')}>
+        <div className='modifierBoard-todo'>
+          <div className={'modifierBoard-icon ' + (openFocus && 'active')}>
             <i
               onClick={openFocusHandler}
             >

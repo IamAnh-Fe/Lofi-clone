@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from '../components/TodoForm';
 import TodoItem from '../components/TodoItem';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
+    const loadSavedTasks = () => {
+    const saved = localStorage.getItem('items');
+    if(saved) {
+      setTodos(JSON.parse(saved));
+    }
+    }
+    useEffect(() => {
+   loadSavedTasks();
+ }, [])
 
   const addTodo = (text) => {
     let id = 1;
@@ -13,11 +22,14 @@ const TodoList = () => {
     let todo = {id: id, text: text, completed: false, important: false}
     let newTodos = [todo, ...todos]
     setTodos(newTodos)
+  localStorage.setItem('items', JSON.stringify(newTodos));
   };
 
   const removeTodo = (id) => {
     let updatedTodos = [...todos].filter((todo) => todo.id !== id);
     setTodos(updatedTodos);
+      localStorage.removeItem('items');
+
   };
 
   const completeTodo = (id) => {

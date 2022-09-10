@@ -5,7 +5,6 @@ import Player from '../Player';
 
 const Footer = () => {
     const mood = useSelector((state) => state.mood.moodMode);
-    console.log(mood)
   const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   return (
@@ -39,7 +38,6 @@ const Footer = () => {
           />
         )}
     </div>
-    {/* <span></span> */}
 
     </div>
   )

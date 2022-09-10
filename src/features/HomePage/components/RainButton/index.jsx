@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import ReactAudioPlayer from 'react-audio-player';
 import { AiOutlineCloud } from 'react-icons/ai';
 import { BsCloudRainFill } from 'react-icons/bs';
+import { BiCircle } from 'react-icons/bi';
+
 import { changeRainStatus } from '../../../../redux/rainSlice';
 const RainButton = () => {
     const dispatch = useDispatch();
@@ -28,10 +30,7 @@ console.log(rain.rainValue)
         />
       )}
       <div className='rainButton-button'  onClick={handleRain}>
-       {
-        buttonClick ? <span className='rainButton-icon'><BsCloudRainFill/></span> 
-        : <span className='rainButton-icon'><AiOutlineCloud/></span>
-       }
+       <span className='rainButton-icon'><BiCircle/></span>
       </div>
     </div>
   )

@@ -2,6 +2,12 @@
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   }
+  body {
+  overflow: hidden; /* Hide scrollbars */
+}
+  a {
+    text-decoration: none;
+  }
   .videoIn {
   z-index: 1;
   object-fit: cover;

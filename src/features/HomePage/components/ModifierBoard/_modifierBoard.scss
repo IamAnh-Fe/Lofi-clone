@@ -16,13 +16,17 @@
   align-items: center;
   justify-content: space-around;
   transition: border-radius 0.1s ease-in-out;
-  &-icon {
+  &-music,
+  &-todo {
      cursor: pointer;
     padding: 14px;
     border-top: 2px solid #4e5054;
-    &-icon:first-child {
-        border: none;
-    }
+    // &-icon:first-child {
+    //     border: none;
+    // }
+  }
+  &-icon i {
+    font-size: 32px;
   }
   .modifierBoard .mood {
   border-radius: 0 34px 34px 34px;
@@ -106,6 +110,6 @@
 &-input {
     width: 180px;
 }
-
+  
 
 }

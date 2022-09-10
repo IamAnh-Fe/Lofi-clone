@@ -1,16 +1,61 @@
 .header {
+  position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+   background-image: linear-gradient(180deg, rgba(66, 65, 65, 0.8), transparent);
+      color: #fff;
     &-list {
- position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 10%;
-  z-index: 10;
-  background-image: linear-gradient(180deg, rgba(66, 65, 65, 0.8), transparent);
-  padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+  height: 60px;
+
     }
     &-logo {
-      max-width: 150px;
-      max-height: 150px;
+      // max-width: 150px;
+      // max-height: 150px;
+      width: 150px;
     }
+    &-center span {
+      font-size: 18px;
+      display: flex;
+      gap: 1px;
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+
+
+    }
+    &-github {
+      color: #fff;
+    }
+    &-icon {
+      height: 32px!important;
+    width: 32px!important;
+      background-color: #131f14;
+     border-style: none;
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    }
+    &-time {
+          padding: 5px;
+      background: hsla(0,0%,100%,.15);
+    border-radius: 4px;
+    }
+     @include maxw(580px) {
+   &-logo {
+    display: none;
+   }
+   &-center {
+    display: none;
+   }
+  }
 }
