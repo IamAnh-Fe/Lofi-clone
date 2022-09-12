@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ReactAudioPlayer from 'react-audio-player';
-import { AiOutlineCloud } from 'react-icons/ai';
-import { BsCloudRainFill } from 'react-icons/bs';
 import { BiCircle } from 'react-icons/bi';
 
 import { changeRainStatus } from '../../../../redux/rainSlice';

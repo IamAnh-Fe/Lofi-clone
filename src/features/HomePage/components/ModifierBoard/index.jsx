@@ -5,7 +5,7 @@ import {BsSliders, BsFillMoonFill} from 'react-icons/bs';
 import {FcTodoList} from 'react-icons/fc';
 import {FaGuitar, FaCoffee, FaVolumeDown, FaVolumeUp} from 'react-icons/fa';
 import { changeMoodStatus } from '../../../../redux/moodSlice';
-import {setRain} from '../../../../redux/rainSlice';
+// import {setRain} from '../../../../redux/rainSlice';
 import { changeVolume } from '../../../../redux/volumeSlice';
 import { useTimer } from 'react-timer-hook';
 import CountDownTimer from '../../../CountDownTimer/page';
@@ -16,13 +16,13 @@ const ModifierBoard = () => {
 
   const dispatch = useDispatch();
   const mood = useSelector((state) => state.mood.moodMode);
-  const rain = useSelector((state) => state.rain.rainValue);
+  // const rain = useSelector((state) => state.rain.rainValue);
   const volume = useSelector((state) => state.volume.volumeValue);
-console.log(mood)
+
    const [openMood, setOpenMood] = useState(false);
   const [openFocus, setOpenFocus] = useState(false);
 
-  const [cityRain, setCityRain] = useState(rain);
+  // const [cityRain, setCityRain] = useState(rain);
   const [cityTraffic, setCityTraffic] = useState(0);
   const [fireplace, setFireplace] = useState(0);
   const [snow, setSnow] = useState(0);
@@ -53,10 +53,10 @@ console.log(mood)
     restart(time);
   };
 
-   const rainSliderHandler = (e) => {
-    setCityRain(e.target.value);
-    dispatch(setRain(cityRain));   
-  };
+  //  const rainSliderHandler = (e) => {
+  //   setCityRain(e.target.value);
+  //   dispatch(setRain(cityRain));   
+  // };
 
   const openFocusHandler = () => {
     setOpenFocus(!openFocus);

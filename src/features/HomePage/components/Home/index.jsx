@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types'
 import nightClear from "../../../../assets/video/Night-clear.mp4"
 import nightRain from "../../../../assets/video/Night-rainny.mp4"
 import dayClear from "../../../../assets/video/Day-sunny.mp4"
@@ -8,13 +7,12 @@ import dayRain from "../../../../assets/video/Day-rainny.mp4"
 import RainButton from '../RainButton';
 import ModifierBoard from '../ModifierBoard';
 const Home = () => {
-     const [timerStart, setTimerStart] = useState(false);
+    //  const [timerStart, setTimerStart] = useState(false);
 
     const daynight = useSelector((state) => state.mode.mode);
   const rain = useSelector((state) => state.rain);
 
       const combineMode = `${daynight}-${rain.rainMode}`;
-console.log(combineMode)
   return (
     <div>  
         <video
@@ -56,6 +54,5 @@ console.log(combineMode)
   )
 }
 
-Home.propTypes = {}
 
 export default Home
